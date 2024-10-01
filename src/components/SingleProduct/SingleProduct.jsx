@@ -11,6 +11,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 // import { addToCart, fetchCartItems } from '../../Redux/actions/cartActions'
 import { useDispatch, useSelector } from 'react-redux'
+import { fetchCartItems } from '../../Redux/actions/cartActions'
 
 const SingleProduct = () => {
     const {id}= useParams()
@@ -55,12 +56,13 @@ const SingleProduct = () => {
                 alert('Item already in cart')
             }else{
                 alert('item aded in cart')
+                dispatch(fetchCartItems())
                 // dispatch({
                 //     type: ADD_TO_CART,
                 //     payload: { productId, quantity: 1 }
                 // });
             }
-    
+        
         } catch (error) {
             console.log('Internal server error')
         }

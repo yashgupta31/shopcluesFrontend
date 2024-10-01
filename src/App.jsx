@@ -8,6 +8,7 @@ import Auth from './pages/Auth/Auth'
 import SingleProduct from './components/SingleProduct/SingleProduct'
 import Cart from './pages/Cart/Cart'
 import Products from './pages/Products/Products'
+import AddProduct from './pages/AddProduct/AddProduct'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
         <Route path='/cart' element={<Cart />} />
         <Route path='/products/all/:type' element={<Products />} />
         <Route path='/products/:id' element={<SingleProduct />} />
-        {/* <Route path='/auth' element={<Auth />} /> */}
+        <Route path='/addproduct' element={<AddProduct />} />
       </Routes>
      </Box>
     </>

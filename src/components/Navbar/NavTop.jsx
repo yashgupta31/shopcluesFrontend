@@ -17,6 +17,7 @@ import AuthContext from '../../context/AuthContext'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchCartItems } from '../../Redux/actions/cartActions'
+import { IoAddOutline } from 'react-icons/io5'
 
 
 const buttonCss={
@@ -127,6 +128,7 @@ const NavTop = () => {
                 </Box>
                 <Icon as={IoIosNotificationsOutline} />
                 <Icon as={CiHeart} />
+                <NavLink to={'/addproduct'}><Icon as={IoAddOutline} /></NavLink>
                 <NavLink to={'/cart'} style={{position: 'relative'}}><Icon as={BsCart3} /> <Text bg={colors.secondary} color={'white'} h={'1.2rem'} w={'1.2rem'} fontSize={'0.9rem'} fontWeight={'1.2rem'} display={'flex'} alignItems={'center'} justifyContent={'center'} borderRadius={'50%'} position={'absolute'} top={'-2px'} right={'-5px'} border={'1px solid white'}>{cartProducts.length}</Text></NavLink>
                 
             </Box>

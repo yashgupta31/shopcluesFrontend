@@ -7,6 +7,8 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [userDetail, setUserDetail] = useState({});
+  console.log(userDetail)
+  
   const [isOpen, setIsOpen]= useState(JSON.parse(localStorage.getItem('isOpen')) || false)
   // console.log(userDetail.length)
   const dispatch= useDispatch()
